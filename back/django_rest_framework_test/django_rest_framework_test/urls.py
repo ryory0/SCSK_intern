@@ -15,12 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include, re_path
-from markdownx.views import MarkdownifyView, ImageUploadView
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('daily/', include('app.urls')),
-    re_path(r'^markdownx/markdownify/$', MarkdownifyView.as_view(), name='markdownx_markdownify'),
-    re_path(r'^markdownx/upload/$', ImageUploadView.as_view(), name='markdownx_upload'),
+    path('', include('app.urls'))
 ]
