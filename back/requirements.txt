@@ -6,3 +6,4 @@ django-markdownx==3.0.1
 mysqlclient
 python-dotenv
 requests
+geopy
