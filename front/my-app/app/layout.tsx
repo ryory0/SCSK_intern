@@ -1,4 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react'
+import Header from "../components/Header";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,7 +11,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ></script>
       </head>
       <body>
-        <ChakraProvider>{children}</ChakraProvider>
+        <ChakraProvider>
+        <Header />
+          {children}
+        </ChakraProvider>
       </body>
     </html>
   )
